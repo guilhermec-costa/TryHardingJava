@@ -1,0 +1,1289 @@
+!SESSION 2024-03-24 21:03:15.996 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.2
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+Command-line arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.545
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.643
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.663
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.664
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.668
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.668
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.670
+!MESSAGE Wait for AutoBuildOffJob start
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.671
+!MESSAGE Wait for AutoBuildOffJob end 1ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.671
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.671
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.672
+!MESSAGE ProjectRegistryRefreshJob finished 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.672
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.678
+!MESSAGE Started org.eclipse.buildship.core 6ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.689
+!MESSAGE LoadingGradleVersionJob finished 10ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.701
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.701
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.735
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:16.994
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.557
+!MESSAGE Workspace initialized in 1865ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.630
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.632
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.651
+!MESSAGE >> New configuration: {java=[]}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.652
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:18.692
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.077
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.325
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.325
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.333
+!MESSAGE Validated 1. Took 249 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.346
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.364
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:19.364
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:20.796
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:20.871
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:20.979
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:21.075
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:21.259
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:32.384
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:03:37.981
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:16.589
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:16.712
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:16.864
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:27.397
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:28.024
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:28.088
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:28.184
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.166
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.175
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.180
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.220
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.227
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:29.230
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
+!SESSION 2024-03-24 21:04:41.759 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=21.0.2
+java.vendor=N/A
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Framework arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+Command-line arguments:  -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.protocol=true -Dlog.level=ALL -Xmx4g --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.264
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.353
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.370
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.370
+!MESSAGE Initializing Java Language Server 1.9.0.202203031534
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.374
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.374
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.navigate.openTypeHierarchy, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.resolveStackTraceLocation, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.navigate.resolveTypeHierarchy, java.edit.stringFormatting, java.project.getSettings, java.project.updateSourceAttachment, java.project.upgradeGradle, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.376
+!MESSAGE Starting org.eclipse.m2e.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.376
+!MESSAGE Started org.eclipse.m2e.core 0ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.720
+!MESSAGE ProjectRegistryRefreshJob finished 343ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.721
+!MESSAGE Starting org.eclipse.buildship.core
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.728
+!MESSAGE Started org.eclipse.buildship.core 7ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.739
+!MESSAGE LoadingGradleVersionJob finished 10ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.751
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:42.979
+!MESSAGE Importing Maven project(s)
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.073
+!MESSAGE Workspace initialized in 332ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.086
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.087
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.097
+!MESSAGE >> New configuration: {java=[]}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.098
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.146
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.252
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.589
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.592
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.644
+!MESSAGE Reconciled 2. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.753
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.753
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.766
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.766
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.767
+!MESSAGE Validated 2. Took 113 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.796
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.805
+!MESSAGE >> registerWatchers'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:43.805
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:45.608
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:45.751
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:45.927
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:46.239
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:46.615
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:46.831
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.066
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.071
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.074
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.075
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.077
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.122
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.267
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.536
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.536
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.547
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.547
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.547
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.548
+!MESSAGE Validated 2. Took 20 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.548
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.557
+!MESSAGE Reconciled 1. Took 6 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.565
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.600
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:47.747
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:48.015
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:48.015
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:48.030
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:48.030
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:48.030
+!MESSAGE Validated 2. Took 23 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.260
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.261
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.262
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.314
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.316
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.459
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.723
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.723
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.730
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.730
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.730
+!MESSAGE Validated 2. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.996
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:49.997
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.001
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.048
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.052
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.195
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.474
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.474
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.487
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.488
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.488
+!MESSAGE Validated 2. Took 21 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.668
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.669
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.670
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.721
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.723
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:50.868
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.180
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.180
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.188
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.188
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.188
+!MESSAGE Validated 2. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.428
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.432
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:51.479
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:52.073
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:52.246
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:52.382
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:52.980
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.033
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.036
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.179
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.232
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.445
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.445
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.453
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.453
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.455
+!MESSAGE Validated 2. Took 18 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:53.457
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.236
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.288
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.289
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.436
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.472
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.693
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.693
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.698
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.698
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:54.698
+!MESSAGE Validated 2. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:55.613
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:55.619
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:55.672
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.592
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.604
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.605
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.605
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.606
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.659
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.659
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.804
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.900
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.904
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:56.953
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.066
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.066
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.073
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.073
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.073
+!MESSAGE Validated 2. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.437
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.440
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.488
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.636
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.639
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.688
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.947
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.949
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:57.950
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.002
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.003
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.158
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.294
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.410
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.410
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.417
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.417
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.418
+!MESSAGE Validated 2. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.494
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.646
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.822
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:58.967
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.135
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.278
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.684
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.731
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.784
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.786
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:04:59.932
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.051
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.052
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.063
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.104
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.107
+!MESSAGE Reconciled 1. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.252
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.514
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.514
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.523
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.523
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.523
+!MESSAGE Validated 2. Took 15 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.923
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.975
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:00.978
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.124
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.435
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.435
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.441
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.441
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.441
+!MESSAGE Validated 2. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.851
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.852
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.865
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.904
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:01.906
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.052
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.091
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.095
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.143
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.266
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.319
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.321
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.466
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.727
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.728
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.734
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.734
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:02.735
+!MESSAGE Validated 2. Took 13 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.332
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.337
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.351
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.352
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.385
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.406
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.531
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.812
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.812
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.818
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.818
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.818
+!MESSAGE Validated 2. Took 11 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:03.910
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.054
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.483
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.537
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.538
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.622
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.683
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.712
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.993
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:04.993
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:05.000
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:05.000
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:05.000
+!MESSAGE Validated 2. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:05.381
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:05.519
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:06.595
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:06.601
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:06.654
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:07.295
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:07.535
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:07.719
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.078
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.487
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.515
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.516
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.519
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.525
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.569
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.714
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.923
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.924
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.924
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.929
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.930
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:08.930
+!MESSAGE Validated 2. Took 10 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.033
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.034
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.931
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.951
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.953
+!MESSAGE >> document/resolveCompletionItem
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.956
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:09.999
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.131
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.412
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.412
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.419
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.419
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.420
+!MESSAGE Validated 2. Took 14 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.571
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.626
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.628
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.629
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.673
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:10.771
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.006
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.126
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.127
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.131
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.131
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.131
+!MESSAGE Validated 2. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.167
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.301
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:11.445
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:12.179
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:12.184
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:12.237
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:15.128
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:15.654
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:15.798
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:17.957
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:18.125
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:18.341
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:18.502
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:19.117
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:19.749
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:19.901
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:20.053
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:20.657
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:21.373
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:21.517
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:21.653
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:21.989
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:22.190
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:22.461
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:23.613
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:24.109
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:24.421
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:24.629
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:24.821
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.014
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.350
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.782
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.951
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.986
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.987
+!MESSAGE >> document/completion
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.990
+!MESSAGE Completion request completed
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:25.990
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.040
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.042
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.186
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.494
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.494
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.498
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.498
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:26.498
+!MESSAGE Validated 2. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.153
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.190
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.192
+!MESSAGE Reconciled 1. Took 1 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.207
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.353
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.647
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.648
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.654
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.654
+!MESSAGE 5 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.655
+!MESSAGE Validated 2. Took 12 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.708
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.852
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:27.997
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:28.133
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:28.722
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:28.727
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:28.780
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:29.407
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:30.036
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:05:30.181
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:05.731
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:05.834
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:05.914
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:06.067
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:10.032
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:11.960
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:11.961
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:11.962
+!MESSAGE >> textDocument/semanticTokens/full
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:11.965
+!MESSAGE Reconciled 1. Took 0 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.026
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.369
+!MESSAGE begin problem for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.370
+!MESSAGE 4 problems reported for /HelloWorldController.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.373
+!MESSAGE begin problem for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.373
+!MESSAGE 6 problems reported for /QuickstartApplication.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.373
+!MESSAGE Validated 2. Took 7 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.474
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.610
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:12.762
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:16.688
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:16.842
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:27.712
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:28.553
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:28.674
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:28.786
+!MESSAGE >> document/signatureHelp
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.151
+!MESSAGE >> document/willSaveWaitUntil
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.158
+!MESSAGE >> document/didSave
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.163
+!MESSAGE >> shutdown
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.188
+!MESSAGE >> exit
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.188
+!MESSAGE Shutdown received... waking up main thread
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2024-03-24 21:06:30.192
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is stopping:
