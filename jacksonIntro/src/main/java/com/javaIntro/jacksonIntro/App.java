@@ -7,7 +7,7 @@ public class App {
         String json = "{ \"name\": \"Churros\"}";
 
         try {
-            JsonNode parseResult = JsonParser.parse(json);
+            JsonNode parseResult = JsonParser.fromJsonStringToJsonNode(json);
             System.out.println(parseResult.get("name").asText());
         } catch(Exception error) {
             System.out.println(error.getMessage());
