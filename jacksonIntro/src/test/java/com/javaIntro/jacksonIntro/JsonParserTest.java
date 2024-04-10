@@ -10,7 +10,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 
 public class JsonParserTest {
 
-    private String sampleJsonString = "{ \"name\": \"Churros\"}";
+    private String sampleJsonString = "{ \"name\": \"Churros\", \"age\": 7}";
 
     @Test
     public void testParse() throws IOException {
@@ -21,7 +21,14 @@ public class JsonParserTest {
     @Test
     public void fromJsonNodetoObject() throws IOException {
         JsonNode jsonNode = JsonParser.fromJsonStringToJsonNode(sampleJsonString);
-        JSONTestModel data = JsonParser.fromJsonNodeToJavaObject(jsonNode, JSONTestModel.class);
+        JSONTestModel data = JsonParser.fromJsonNodeToObject(jsonNode, JSONTestModel.class);
         assertEquals("Churros", data.name());
+    }
+
+    @Test
+    public void testToJsonNode() {
+        JSONTestModel jsonTestModel = new JSONTestModel("Churros");
+        JsonNode jsonNode = JsonParser.toJsonNode(jsonTestModel);
+        assertEquals(jsonNode.get("name").asText(), "Churros");
     }
 }
