@@ -8,7 +8,7 @@ import app.Collections.Collections;
 public class Main {
     public static void main(String[] args) {
         // FPrintf.Start();
-        // Exceptions.Start();
+        Exceptions.Start();
         // Lambdas.Start();
         // Records.Start();
         // FAnnotations.Start();
@@ -24,7 +24,7 @@ public class Main {
         // Collections.Lists();
         //
         // Collections.Sets();
-        Collections.Maps();
+        // Collections.Maps();
     }
 
     public static void test(String message) {
