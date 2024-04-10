@@ -14,4 +14,5 @@ public enum EDaysOfWeek  {
     EDaysOfWeek(int likeIt) {
         this.likeIt = likeIt;
     }
+
 }

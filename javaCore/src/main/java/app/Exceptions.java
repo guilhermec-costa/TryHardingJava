@@ -8,6 +8,7 @@ public class Exceptions {
             System.out.println(e.getMessage());
         } catch(Exception e) {
             System.out.println("Unexpected error");
+            System.out.println(e.getMessage());
         }
     }
 	@Override
