@@ -9,15 +9,20 @@ public class Exceptions {
         /*
          *  Checked Exceptions: java obligates you to deal with that exception during compile time
          *  readFile, for example, can throw an error if the file does not exist. So you have to deal with this except.
+         *
+         *  Unchecked Exceptions: they don't occur during compile time. Only in the execution of the program
+         *  All unchecked exceptions extends the RuntimeException interface
+         *  for example, NullPointerException
          * */
         FileReader fileReader;
         try {
             fileReader = new FileReader("teste.txt");
             System.out.println(fileReader.getClass());
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
-        }         try {
+        }
+
+        try {
             System.out.println("Before the exception");
             int number = Integer.parseInt("4");
             System.out.println("I'm not going to be executed after the error was throwned");
