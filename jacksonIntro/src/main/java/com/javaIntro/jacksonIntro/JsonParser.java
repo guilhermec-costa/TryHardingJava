@@ -3,9 +3,12 @@ package com.javaIntro.jacksonIntro;
 import java.io.IOException;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.PrettyPrinter;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class JsonParser {
     private static ObjectMapper defaultObjectMapper = generateConfiguredObjectMapper();
@@ -24,7 +27,18 @@ public class JsonParser {
         return defaultObjectMapper.treeToValue(jsonNode, _class);
     }
 
-    public static JsonNode toJsonNode(Object object) {
+    public static JsonNode fromObjectToJsonNode(Object object) {
         return defaultObjectMapper.valueToTree(object);
+    }
+
+    public static String fromJsonNodeToJsonString(JsonNode jsonNode) throws JsonProcessingException  {
+        ObjectWriter objectWriter = defaultObjectMapper.writer();
+        return objectWriter.writeValueAsString(jsonNode);
+    }
+
+    public static String prettifyJsonNode(JsonNode jsonNode) throws JsonProcessingException {
+        ObjectWriter objectWriter = defaultObjectMapper.writer();
+        objectWriter = objectWriter.with(SerializationFeature.INDENT_OUTPUT);
+        return objectWriter.writeValueAsString(jsonNode);
     }
 }

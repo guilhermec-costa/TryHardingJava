@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import org.junit.Test;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class JsonParserTest {
@@ -28,7 +29,23 @@ public class JsonParserTest {
     @Test
     public void testToJsonNode() {
         JSONTestModel jsonTestModel = new JSONTestModel("Churros");
-        JsonNode jsonNode = JsonParser.toJsonNode(jsonTestModel);
+        JsonNode jsonNode = JsonParser.fromObjectToJsonNode(jsonTestModel);
         assertEquals(jsonNode.get("name").asText(), "Churros");
+    }
+
+    @Test
+    public void testFromObjectToJsonNode() throws JsonProcessingException {
+        JSONTestModel jsonTestModel = new JSONTestModel("Churros");
+        JsonNode jsonNode = JsonParser.fromObjectToJsonNode(jsonTestModel);
+        String jsonString = JsonParser.fromJsonNodeToJsonString(jsonNode);
+        System.out.println(jsonString);
+    }
+
+    @Test
+    public void testPrettifyJsonString() throws JsonProcessingException {
+        JSONTestModel jsonTestModel = new JSONTestModel("Churros");
+        JsonNode jsonNode = JsonParser.fromObjectToJsonNode(jsonTestModel);
+        String formmatedJsonString = JsonParser.prettifyJsonNode(jsonNode);
+        System.out.println(formmatedJsonString);
     }
 }
