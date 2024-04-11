@@ -12,6 +12,11 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class JsonParserTest {
 
     private String sampleJsonString = "{ \"name\": \"Churros\", \"age\": 7}";
+    private String dateJsonString = "{  \n" +
+    "\"name\": \"Churros\", \n" +
+    "\"age\": 7, \n" +
+    "\"date\": \"2024-04-05\" \n" +
+    "}";
 
     @Test
     public void testParse() throws IOException {
@@ -44,8 +49,16 @@ public class JsonParserTest {
     @Test
     public void testPrettifyJsonString() throws JsonProcessingException {
         JSONTestModel jsonTestModel = new JSONTestModel("Churros");
+        System.out.println(dateJsonString);
         JsonNode jsonNode = JsonParser.fromObjectToJsonNode(jsonTestModel);
         String formmatedJsonString = JsonParser.prettifyJsonNode(jsonNode);
-        System.out.println(formmatedJsonString);
+    }
+
+    @Test
+    public void testJsonWithDateField() throws Exception {
+        JsonNode jsonNode = JsonParser.fromJsonStringToJsonNode(dateJsonString);
+        DatePOJO datePOJO = JsonParser.fromJsonNodeToObject(jsonNode, DatePOJO.class);
+        System.out.println(datePOJO.date());
+        // assertEquals("Churros", datePOJO.date());
     }
 }
