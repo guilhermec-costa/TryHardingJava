@@ -18,6 +18,8 @@ public class JsonParserTest {
     "\"date\": \"2024-04-05\" \n" +
     "}";
 
+    private String complexJsonString = "{\"author\":\"Churros Augusto\",\"books\":[{\"title\":\"title 1\",\"inPrint\":true,\"publishDate\":\"2024-02-10\"},{\"title\":\"title 2\",\"inPrint\":false,\"publishDate\":\"2023-01-01\"},{\"title\":\"title 3\",\"inPrint\":false,\"publishDate\":\"2022-05-15\"}]}";
+
     @Test
     public void testParse() throws IOException {
         JsonNode parseResult = JsonParser.fromJsonStringToJsonNode(sampleJsonString);
@@ -58,7 +60,18 @@ public class JsonParserTest {
     public void testJsonWithDateField() throws Exception {
         JsonNode jsonNode = JsonParser.fromJsonStringToJsonNode(dateJsonString);
         DatePOJO datePOJO = JsonParser.fromJsonNodeToObject(jsonNode, DatePOJO.class);
-        System.out.println(datePOJO.date());
-        // assertEquals("Churros", datePOJO.date());
+        assertEquals("2024-04-05", datePOJO.date().toString());
+    }
+
+    @Test
+    public void testComplexJson() throws Exception {
+        JsonNode jsonNode = JsonParser.fromJsonStringToJsonNode(complexJsonString);
+        AuthorPOJO authorPOJO = JsonParser.fromJsonNodeToObject(jsonNode, AuthorPOJO.class);
+        System.out.println(authorPOJO.author());
+        for(BooksPOJO book : authorPOJO.books()) {
+            String formmatedBookString = String.format("%s - %s - %s", 
+                book.title(), book.publishDate(), book.inPrint());
+            System.out.println(formmatedBookString);
+        }
     }
 }

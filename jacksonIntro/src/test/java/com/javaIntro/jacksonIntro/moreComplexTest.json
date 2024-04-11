@@ -1,0 +1,20 @@
+{
+    "author":"Churros",
+    "books": [
+        {
+            "title": "title 1",
+            "inPrint": true,
+            "publishDate": "2024-02-10"
+        },
+        {
+            "title": "title 2",
+            "inPrint": false,
+            "publishDate": "2023-01-01"
+        },
+        {
+            "title": "title 3",
+            "inPrint": false,
+            "publishDate": "2022-05-15"
+        }
+    ]
+}

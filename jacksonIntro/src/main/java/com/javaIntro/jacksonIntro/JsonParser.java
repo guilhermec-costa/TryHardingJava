@@ -15,6 +15,8 @@ public class JsonParser {
 
     private static ObjectMapper generateConfiguredObjectMapper() {
         ObjectMapper objectMapper = new ObjectMapper();
+
+        // suport for LocalDate type on newer version of java
         objectMapper.registerModule(new JavaTimeModule());
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper;
