@@ -1,0 +1,25 @@
+package com.javaIntro.JDBCIntro;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Driver;
+/**
+ * Hello world!
+ *
+ */
+public class JDBCIntro 
+{
+    public static void main( String[] args ) throws Exception
+    {       
+        // Driver driver = (Driver) Class.forName("org.h2.Driver", true, JDBCIntro.class.getClassLoader()).newInstance();
+        // DriverManager.registerDriver(driver);
+        Class.forName("org.h2.Driver");
+        try ( Connection connection = DriverManager.getConnection("jdbc:h2:mem:")) {
+            System.out.println(connection.isValid(0));
+        } catch(SQLException error) {
+
+            System.out.println(error.getMessage());
+        }
+    }
+}
