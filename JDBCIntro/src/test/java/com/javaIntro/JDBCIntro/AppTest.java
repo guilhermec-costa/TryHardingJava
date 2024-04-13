@@ -9,6 +9,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class AppTest 
@@ -28,10 +29,17 @@ public class AppTest
     }
 
     @Test
-    public void insertRow() {
-        try ( Connection databaseConnection = DriverManager.getConnection(connectionString)) {
-            PreparedStatement preparedStatement = databaseConnection.prepareStatement("select * from users");
+    public void getUserName() {
+        try ( Connection databaseConnection = DriverManager.getConnection("jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';")) {
+            PreparedStatement preparedStatement = databaseConnection.prepareStatement("select * from users;");
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                String name = resultSet.getString("name");
+                assertEquals("Churros", name);
+            }
+
         } catch(SQLException error) {
+            System.out.println(error.getMessage());
         }
     }
 }
