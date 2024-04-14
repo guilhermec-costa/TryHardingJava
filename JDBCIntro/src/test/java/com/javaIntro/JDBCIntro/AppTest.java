@@ -9,37 +9,47 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Logger;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 public class AppTest 
-{
-    private String connectionString = "jdbc:h2:mem:";
-    Logger logger = Logger.getLogger("JDBCIntro");
+{   
+    private String connectionString;
+    private Connection databaseConnection;
+    private Logger logger;
     
-    @Test
-    public void establishH2DatabaseConnection()
-    {
-        try ( Connection databaseConnection = DriverManager.getConnection(connectionString)) {
-            Boolean isConnectionValid = databaseConnection.isValid(0);
-            assertEquals(true, isConnectionValid);
+    @Before
+    public void initialize() {
+        this.connectionString = "jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';";
+        this.logger = Logger.getLogger("JDBCIntro");
+
+        try {
+            this.databaseConnection = DriverManager.getConnection(connectionString);
         } catch(SQLException error) {
             logger.info(error.getMessage());
         }
     }
 
     @Test
-    public void getUserName() {
-        try ( Connection databaseConnection = DriverManager.getConnection("jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';")) {
-            PreparedStatement preparedStatement = databaseConnection.prepareStatement("select * from users;");
+    public void establishH2DatabaseConnection() throws SQLException
+    {   
+        Boolean isConnectionValid = this.databaseConnection.isValid(0);
+        assertEquals(true, isConnectionValid);
+    }
+
+    @After
+    public void finalize() throws SQLException  {
+        this.databaseConnection.close();
+    }
+
+    @Test
+    public void getUserName() throws SQLException {
+            PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
             ResultSet resultSet = preparedStatement.executeQuery();
             while(resultSet.next()) {
                 String name = resultSet.getString("name");
                 assertEquals("Churros", name);
             }
-
-        } catch(SQLException error) {
-            System.out.println(error.getMessage());
-        }
     }
 }
