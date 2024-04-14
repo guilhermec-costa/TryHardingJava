@@ -45,7 +45,9 @@ public class AppTest
         assertEquals(true, isConnectionValid);
     }
 
-
+    
+    @Test
+    public void getAllUsers() throws
     @Test
     public void getUserName() throws SQLException {
             PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
@@ -57,6 +59,17 @@ public class AppTest
     }
 
     @Test
+    public void getUserById() throws SQLException {
+        PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users where id = ?");
+        preparedStatement.setInt(1, 1);
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()) {
+            String userName = resultSet.getString("name");
+            assertEquals("Churros", userName);
+        }
+    }
+
+    @Test
     public void getUserId() throws SQLException {
         PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -64,5 +77,15 @@ public class AppTest
             int userId = resultSet.getInt("id");
             assertEquals(1, userId);
         }
+    }
+
+    @Test
+    public void insertOneRow() throws SQLException {
+        PreparedStatement preparedStatement = this.databaseConnection.
+                                                prepareStatement("insert into users (name) values (?);");
+
+        preparedStatement.setString(1, "Shoyou");
+        int numberOfRowsInserted = preparedStatement.executeUpdate();
+        assertEquals(1, numberOfRowsInserted);
     }
 }
