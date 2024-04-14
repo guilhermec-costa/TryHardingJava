@@ -19,10 +19,10 @@ public class AppTest
     private String connectionString;
     private Connection databaseConnection;
     private Logger logger;
-    private PreparedStatement usersTablePreparedStatement; 
     
     @Before
-    public void initialize() {
+    public void initialize() 
+    {
         this.connectionString = "jdbc:h2:mem:;INIT=RUNSCRIPT FROM 'classpath:users.sql';";
         this.logger = Logger.getLogger("JDBCIntro");
 
@@ -34,7 +34,8 @@ public class AppTest
     }
 
     @After
-    public void finalize() throws SQLException  {
+    public void finalize() throws SQLException
+    {
         this.databaseConnection.close();
     }
 
@@ -45,21 +46,20 @@ public class AppTest
         assertEquals(true, isConnectionValid);
     }
 
-    
     @Test
-    public void getAllUsers() throws
-    @Test
-    public void getUserName() throws SQLException {
-            PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while(resultSet.next()) {
-                String name = resultSet.getString("name");
-                assertEquals("Churros", name);
-            }
+    public void getUserName() throws SQLException
+    {
+        PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()) {
+            String name = resultSet.getString("name");
+            assertEquals("Churros", name);
+        }
     }
 
     @Test
-    public void getUserById() throws SQLException {
+    public void getUserById() throws SQLException 
+    {
         PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users where id = ?");
         preparedStatement.setInt(1, 1);
         ResultSet resultSet = preparedStatement.executeQuery();
@@ -70,7 +70,8 @@ public class AppTest
     }
 
     @Test
-    public void getUserId() throws SQLException {
+    public void getUserId() throws SQLException
+    {
         PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
         ResultSet resultSet = preparedStatement.executeQuery();
         while(resultSet.next()) {
@@ -80,7 +81,8 @@ public class AppTest
     }
 
     @Test
-    public void insertOneRow() throws SQLException {
+    public void insertOneRow() throws SQLException 
+    {
         PreparedStatement preparedStatement = this.databaseConnection.
                                                 prepareStatement("insert into users (name) values (?);");
 
