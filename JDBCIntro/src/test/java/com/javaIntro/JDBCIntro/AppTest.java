@@ -12,12 +12,14 @@ import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.Result;
 
 public class AppTest 
 {   
     private String connectionString;
     private Connection databaseConnection;
     private Logger logger;
+    private PreparedStatement usersTablePreparedStatement; 
     
     @Before
     public void initialize() {
@@ -31,6 +33,11 @@ public class AppTest
         }
     }
 
+    @After
+    public void finalize() throws SQLException  {
+        this.databaseConnection.close();
+    }
+
     @Test
     public void establishH2DatabaseConnection() throws SQLException
     {   
@@ -38,10 +45,6 @@ public class AppTest
         assertEquals(true, isConnectionValid);
     }
 
-    @After
-    public void finalize() throws SQLException  {
-        this.databaseConnection.close();
-    }
 
     @Test
     public void getUserName() throws SQLException {
@@ -51,5 +54,15 @@ public class AppTest
                 String name = resultSet.getString("name");
                 assertEquals("Churros", name);
             }
+    }
+
+    @Test
+    public void getUserId() throws SQLException {
+        PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("select * from users;");
+        ResultSet resultSet = preparedStatement.executeQuery();
+        while(resultSet.next()) {
+            int userId = resultSet.getInt("id");
+            assertEquals(1, userId);
+        }
     }
 }
