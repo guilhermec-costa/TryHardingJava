@@ -104,11 +104,10 @@ public class AppTest
 
     @Test
     public void deleteOneRow() throws SQLException {
-        PreparedStatement preparedStatement = this.databaseConnection.
-            prepareStatement("delete from users where id = ?");
-
+        PreparedStatement preparedStatement = this.databaseConnection.prepareStatement("delete from users where id = ?");
         preparedStatement.setInt(1, 1);
         int deletedCount = preparedStatement.executeUpdate();
+        System.out.println(deletedCount);
         assertEquals(1, deletedCount);
     }
 }
