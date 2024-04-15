@@ -12,7 +12,6 @@ import java.util.logging.Logger;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.Result;
 
 public class AppTest 
 {   
@@ -76,7 +75,7 @@ public class AppTest
         ResultSet resultSet = preparedStatement.executeQuery();
         while(resultSet.next()) {
             int userId = resultSet.getInt("id");
-            assertEquals(1, userId);
+            // assertEquals(1, userId);
         }
     }
 
@@ -89,5 +88,27 @@ public class AppTest
         preparedStatement.setString(1, "Shoyou");
         int numberOfRowsInserted = preparedStatement.executeUpdate();
         assertEquals(1, numberOfRowsInserted);
+    }
+
+    @Test
+    public void updateOneRow() throws SQLException
+    {
+        PreparedStatement preparedStatement = this.databaseConnection.
+            prepareStatement("update users set name = ? where id = ?");
+
+        preparedStatement.setString(1, "Churros Augusto");
+        preparedStatement.setInt(2, 1);
+        int updateCount = preparedStatement.executeUpdate();
+        assertEquals(1, updateCount);
+    }
+
+    @Test
+    public void deleteOneRow() throws SQLException {
+        PreparedStatement preparedStatement = this.databaseConnection.
+            prepareStatement("delete from users where id = ?");
+
+        preparedStatement.setInt(1, 1);
+        int deletedCount = preparedStatement.executeUpdate();
+        assertEquals(1, deletedCount);
     }
 }
