@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.7
+Built-By: guichina
+Build-Jdk: 22
+Class-Path: HikariCP-5.1.0.jar slf4j-api-1.7.36.jar
+Main-Class: com.javaIntro.JDBCIntro.JDBCIntro
+
