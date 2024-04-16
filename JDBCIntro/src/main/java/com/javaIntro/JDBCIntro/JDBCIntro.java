@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import com.zaxxer.hikari.HikariDataSource;
 
@@ -14,9 +16,17 @@ public class JDBCIntro
     {
         DataSource dataSource = createDataSource();
         try ( Connection connection = dataSource.getConnection()) {
-            System.out.println(connection.isValid(0));
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from users where id = ?;");
+            
+            preparedStatement.setInt(1, 1);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while(resultSet.next()) {
+                final String name = resultSet.getString("name");
+                System.out.println(name);
+            }
+
         } catch(SQLException error) {
-            System.out.println(error.getStackTrace());
+            System.out.println(error.getMessage());
         }
     }
 
