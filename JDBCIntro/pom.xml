@@ -8,14 +8,6 @@
   <artifactId>JDBCIntro</artifactId>
   <version>1.0</version>
 
-  <repositories>
-    <repository>
-        <id>jdbc-repos</id>
-        <name>jdbc-repos</name>
-        <url>file://~/.m2</url>
-    </repository>
-  </repositories>
-
   <name>JDBCIntro</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -100,6 +92,17 @@
                 </archive>  
             </configuration>  
         </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <configuration>
+              <archive>
+                <manifest>
+                  <addClasspath>true</addClasspath>
+                </manifest>
+              </archive>
+            </configuration>
+      </plugin>
       </plugins>
     </pluginManagement>
   </build>

@@ -9,8 +9,8 @@ public class JDBCIntro
 
     public static void main( String[] args ) throws Exception
     {
-        DataSource dataSource = createDataSource();
-        System.out.println(System.getProperty("java.classpath"));
+        // DataSource dataSource = createDataSource();
+        // System.out.println(System.getProperty("java.classpath"));
 
         // try ( Connection connection = dataSource.getConnection()) {
         //     System.out.println(connection.isValid(0));
@@ -18,6 +18,7 @@ public class JDBCIntro
         //     // System.out.println(error.getMessage());
         //     // System.out.println(error.getStackTrace());
         // }
+        System.out.println("Hello world");
     }
 
     private static DataSource createDataSource() {
