@@ -6,6 +6,7 @@ import java.util.logging.Logger;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
 public class PostgresDatabaseApplication implements CommandLineRunner {
@@ -26,6 +27,8 @@ public class PostgresDatabaseApplication implements CommandLineRunner {
     public void run(final String... args)
     {
        logger.info(dataSource.toString());
+       JdbcTemplate restTemplate = new JdbcTemplate(dataSource);
+       restTemplate.execute("select 1");
     }
 
 }
