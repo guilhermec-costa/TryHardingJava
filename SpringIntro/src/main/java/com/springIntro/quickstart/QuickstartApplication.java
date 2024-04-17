@@ -9,7 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.springIntro.quickstart.services.IColourPrinter;
-import com.springIntro.quickstart.services.impl.PizzaConfig;
 
 import lombok.extern.java.Log;
 
@@ -69,7 +68,6 @@ import lombok.extern.java.Log;
 public class QuickstartApplication implements CommandLineRunner {
 
     public IColourPrinter colorPrinter;
-    private PizzaConfig pizzaConfig;
     private final DataSource dataSource;
 
     private final static Logger LOGGER = Logger.getLogger(QuickstartApplication.class.getName());
@@ -84,6 +82,6 @@ public class QuickstartApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        LOGGER.info(colorPrinter.print());
+        LOGGER.info(dataSource.toString());
     }
 }

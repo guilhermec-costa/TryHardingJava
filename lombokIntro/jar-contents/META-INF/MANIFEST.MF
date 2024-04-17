@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven 3.8.7
+Built-By: guichina
+Build-Jdk: 22
+Class-Path: jackson-databind-2.17.0.jar jackson-annotations-2.17.0.jar j
+ ackson-core-2.17.0.jar byte-buddy-1.14.9.jar
+Main-Class: com.javaIntro.lombokIntro.App
+
