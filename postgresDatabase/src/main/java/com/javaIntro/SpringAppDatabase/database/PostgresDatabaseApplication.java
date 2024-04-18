@@ -27,8 +27,6 @@ public class PostgresDatabaseApplication implements CommandLineRunner {
     public void run(final String... args)
     {
        logger.info(dataSource.toString());
-       JdbcTemplate restTemplate = new JdbcTemplate(dataSource);
-       restTemplate.execute("select 1");
     }
 
 }
