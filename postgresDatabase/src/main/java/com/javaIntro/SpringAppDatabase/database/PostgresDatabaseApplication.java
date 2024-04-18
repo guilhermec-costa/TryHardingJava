@@ -7,8 +7,17 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.javaIntro.SpringAppDatabase.database.domain.Author;
+
 @SpringBootApplication
 public class PostgresDatabaseApplication implements CommandLineRunner {
+
+    /*
+     *  DAO: Data Access Object
+     *
+     *  It is between the persistency layer and the service layer
+     *  It through them that it is possible to access database tables
+     * */
 
     private final DataSource dataSource;
     private final Logger logger = Logger.getLogger(PostgresDatabaseApplication.class.getName());
