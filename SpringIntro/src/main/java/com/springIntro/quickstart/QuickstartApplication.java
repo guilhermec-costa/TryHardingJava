@@ -68,13 +68,9 @@ import lombok.extern.java.Log;
 public class QuickstartApplication implements CommandLineRunner {
 
     public IColourPrinter colorPrinter;
-    private final DataSource dataSource;
 
     private final static Logger LOGGER = Logger.getLogger(QuickstartApplication.class.getName());
 
-    public QuickstartApplication(final DataSource dataSource) {
-        this.dataSource = dataSource;
-    }
     
 	public static void main(String[] args) {
 		SpringApplication.run(QuickstartApplication.class, args);
@@ -82,6 +78,5 @@ public class QuickstartApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        LOGGER.info(dataSource.toString());
     }
 }

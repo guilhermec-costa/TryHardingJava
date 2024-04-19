@@ -16,7 +16,7 @@ public class PostgresDatabaseApplication implements CommandLineRunner {
      *  DAO: Data Access Object
      *
      *  It is between the persistency layer and the service layer
-     *  It through them that it is possible to access database tables
+     *  Through them that it is possible to access database tables
      * */
 
     private final DataSource dataSource;
