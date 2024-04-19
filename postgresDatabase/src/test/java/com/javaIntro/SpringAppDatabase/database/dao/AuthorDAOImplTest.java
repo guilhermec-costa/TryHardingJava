@@ -4,8 +4,10 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import static org.mockito.Mockito.verify;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
+import static org.mockito.ArgumentMatchers.eq;
 
 import com.javaIntro.SpringAppDatabase.database.DAOs.Impl.AuthorDAOImpl;
 import com.javaIntro.SpringAppDatabase.database.domain.Author;
@@ -24,7 +26,12 @@ public class AuthorDAOImplTest {
 
     @Test
     public void testThatCreateAuthorGeneratesCorrectSQL() {
-        Author author = new Author(1L, "Churros", 8);
+        Author author = new Author("Churros", 8);
         authorDAOImpl.create(author);
+        verify(jdbcTemplate).
+            update(
+                eq("insert into authors (name, age) values (?, ?);"),
+                eq("Churros"), eq(8)
+            );
     }
 }

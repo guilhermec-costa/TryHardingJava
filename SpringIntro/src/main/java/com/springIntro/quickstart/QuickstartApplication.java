@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.springIntro.quickstart.services.IColourPrinter;
+import com.springIntro.quickstart.services.impl.PizzaConfig;
 
 import lombok.extern.java.Log;
 
@@ -78,5 +79,6 @@ public class QuickstartApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
+        System.out.println(new TestClass("name").getName()); 
     }
 }
