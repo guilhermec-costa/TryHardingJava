@@ -31,7 +31,9 @@ public class AuthorDAOImplTest {
         verify(jdbcTemplate).
             update(
                 eq("insert into authors (name, age) values (?, ?);"),
-                eq("Churros"), eq(8)
+                eq("Churros"),
+                eq(8)
             );
     }
+
 }
