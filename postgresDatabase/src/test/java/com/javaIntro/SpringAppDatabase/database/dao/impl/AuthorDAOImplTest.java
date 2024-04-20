@@ -2,6 +2,7 @@ package com.javaIntro.SpringAppDatabase.database.dao.impl;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import static org.mockito.Mockito.verify;
@@ -43,8 +44,8 @@ public class AuthorDAOImplTest {
     public void testThatFindOneAuthorGenetaresCorrectSQL() {
         authorDAOImpl.findOne(1L);
         verify(jdbcTemplate).query(
-            "select * from authors where id = ?"
-            any(RowMapper.class),
+            eq("select * from authors where id = ?;"),
+            ArgumentMatchers.<AuthorDAOImpl.AuthorRowMapper>any(),
             eq(1L)
         );
     }
