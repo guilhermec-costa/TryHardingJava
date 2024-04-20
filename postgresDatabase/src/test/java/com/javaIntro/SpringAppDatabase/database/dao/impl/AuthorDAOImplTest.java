@@ -8,9 +8,7 @@ import org.mockito.Mock;
 import static org.mockito.Mockito.verify;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.RowMapper;
 
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 
 import com.javaIntro.SpringAppDatabase.database.DAOs.Impl.AuthorDAOImpl;

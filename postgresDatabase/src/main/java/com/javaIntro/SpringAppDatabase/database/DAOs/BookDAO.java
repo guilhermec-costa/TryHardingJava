@@ -1,5 +1,10 @@
 package com.javaIntro.SpringAppDatabase.database.DAOs;
 
-public interface BookDAO {
+import java.util.Optional;
 
+import com.javaIntro.SpringAppDatabase.database.domain.Book;
+
+public interface BookDAO {
+   public void create(Book book); 
+   public Optional<Book> findOne(String isbn);
 }
