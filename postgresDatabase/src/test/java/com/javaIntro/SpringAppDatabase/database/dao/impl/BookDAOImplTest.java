@@ -44,7 +44,7 @@ public class BookDAOImplTest {
         bookDAOimpl.findOne("xxxxxxx");
         verify(jdbcTemplate)
             .query(
-                eq("select * from books where id = ?;"),
+                eq("select * from books where isbn = ?;"),
                 ArgumentMatchers.<BookDAOimpl.BookRowMapper>any(),
                 eq("xxxxxxx")
         );

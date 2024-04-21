@@ -7,10 +7,12 @@ import java.util.Optional;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.javaIntro.SpringAppDatabase.database.DAOs.BookDAO;
 import com.javaIntro.SpringAppDatabase.database.domain.Book;
 
+@Component
 public class BookDAOimpl implements BookDAO {
     private final JdbcTemplate jdbcTemplate;
 
@@ -30,8 +32,9 @@ public class BookDAOimpl implements BookDAO {
     
     @Override
     public Optional<Book> findOne(String isbn) {
+        System.out.println(isbn);
         List<Book> books = jdbcTemplate.query(
-            "select * from books where id = ?;",
+            "select * from books where isbn = ?;",
             new BookRowMapper(),
             isbn
         );
