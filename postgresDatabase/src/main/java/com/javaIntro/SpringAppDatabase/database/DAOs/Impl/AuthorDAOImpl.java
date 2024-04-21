@@ -61,6 +61,17 @@ public class AuthorDAOImpl implements AuthorDAO {
     }
 
 
+    @Override
+    public void update(Long id, Author author) {
+        jdbcTemplate.update(
+            "update authors set id = ?, name = ?, age = ? where id = ?;",
+            author.id(),
+            author.name(),
+            author.age(),
+            id
+        );
+    }
+
     public static class AuthorRowMapper implements RowMapper<Author> {
 
         @Override

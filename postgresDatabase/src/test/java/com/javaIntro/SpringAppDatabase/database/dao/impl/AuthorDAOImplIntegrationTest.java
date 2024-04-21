@@ -54,5 +54,14 @@ public class AuthorDAOImplIntegrationTest {
         List <Author> authors = authorDAOImpl.findMany();
         assertEquals(authors.size(), 3);
     }
+
+    @Test
+    public void authorCanBeFullyUpdated() {
+        Author author = new Author(1L, "Guilherme", 20);
+        authorDAOImpl.create(author);
+        authorDAOImpl.update(1L, author);
+        Optional<Author> updatedAuthor = authorDAOImpl.findOne(1L);
+        System.out.println(updatedAuthor.get().name());
+    }
     
 }
