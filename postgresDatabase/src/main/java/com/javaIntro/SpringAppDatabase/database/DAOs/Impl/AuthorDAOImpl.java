@@ -10,9 +10,11 @@ import java.util.Optional;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
+@Component
 public class AuthorDAOImpl implements AuthorDAO {
-    
+        
     private final JdbcTemplate jdbcTemplate;
 
     public AuthorDAOImpl(final JdbcTemplate jdbcTemplate) {
@@ -21,9 +23,9 @@ public class AuthorDAOImpl implements AuthorDAO {
 
     @Override
     public void create(Author author) {
-       jdbcTemplate.update(
-            "insert into authors (name, age) values (?, ?);",
-            author.name(), author.age()
+        jdbcTemplate.update(
+            "insert into authors (id, name, age) values (?, ?, ?);",
+            author.id(), author.name(), author.age()
         );
     }
 
@@ -43,6 +45,7 @@ public class AuthorDAOImpl implements AuthorDAO {
         @Override
         public Author mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Author(
+                    rs.getLong(1),
                     rs.getString("name"),
                     rs.getInt("age")
             );

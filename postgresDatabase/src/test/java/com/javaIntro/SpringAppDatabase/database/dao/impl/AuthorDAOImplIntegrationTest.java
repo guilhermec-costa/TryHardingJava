@@ -1,5 +1,7 @@
 package com.javaIntro.SpringAppDatabase.database.dao.impl;
 
+import java.util.Optional;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +27,10 @@ public class AuthorDAOImplIntegrationTest {
     
     @Test
     public void authorCanBeCreatedAndRecalled() {
-        Author author = new Author("Churros", 9);
+        Author author = new Author(1L, "Churros", 9);
         authorDAOImpl.create(author);
+        Optional<Author> authorResult = authorDAOImpl.findOne(author.id());
+        System.out.println(authorResult.get().name());
     }
     
 }

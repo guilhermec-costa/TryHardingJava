@@ -28,11 +28,12 @@ public class AuthorDAOImplTest {
 
     @Test
     public void testThatCreateAuthorGeneratesCorrectSQL() {
-        Author author = new Author("Churros", 8);
+        Author author = new Author(1L, "Churros", 8);
         authorDAOImpl.create(author);
         verify(jdbcTemplate).
             update(
-                eq("insert into authors (name, age) values (?, ?);"),
+                eq("insert into authors (id, name, age) values (?, ?, ?);"),
+                eq(1L),
                 eq("Churros"),
                 eq(8)
             );
