@@ -1,5 +1,8 @@
 package com.javaIntro.SpringAppDatabase.database.dao.impl;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -32,14 +35,30 @@ public class BookDAOImplIntegrationTest {
     }
 
     @Test
-    public void testThatBookCanBeCreated() {
+    public void testThatBookCanBeCreatedAndRecalled() {
         Author author = new Author(1L, "Churros", 9);
         authorDAOImpl.create(author);
         Book book = new Book("xxxyyyxx", "A random book", author.id());
         bookDAOimpl.create(book);
         Optional<Book> bookResult = bookDAOimpl.findOne(book.isbn());
         System.out.println(bookResult.get().title());
+    }
 
+    @Test
+    public void testThatMultipleBooksCanBeCreatedAndRecalled() {
+        authorDAOImpl.create(new Author(1L, "Churros", 9));
+        authorDAOImpl.create(new Author(2L, "Churros Augusto", 9));
+        Book bookX = new Book("xxxxxxx", "Churros book 1", 1L);
+        Book bookY = new Book("yyyyyyy", "Churros book 2", 2L);
+        Book bookZ = new Book("zzzzzzz", "Churros book 3", 1L);
+        bookDAOimpl.create(new ArrayList<Book>(Arrays.asList(
+            bookX,
+            bookY,
+            bookZ
+        )));
+
+        List<Book> books = bookDAOimpl.findMany();
+        System.out.println(authorDAOImpl.findOne(books.get(1).authorId()).get().name());
     }
 
 }

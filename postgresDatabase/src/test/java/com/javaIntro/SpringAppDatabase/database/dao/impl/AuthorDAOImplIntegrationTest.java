@@ -1,5 +1,7 @@
 package com.javaIntro.SpringAppDatabase.database.dao.impl;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -50,8 +52,7 @@ public class AuthorDAOImplIntegrationTest {
         )));
 
         List <Author> authors = authorDAOImpl.findMany();
-        System.out.println(authors);
-
+        assertEquals(authors.size(), 3);
     }
     
 }

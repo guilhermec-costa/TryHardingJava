@@ -31,6 +31,15 @@ public class BookDAOimpl implements BookDAO {
     }
     
     @Override
+    public void create(List<Book> books) {
+        for(Book book : books) {
+            jdbcTemplate.update(
+                "insert into books (isbn, title, author_id) values (?, ?, ?)",
+                book.isbn(), book.title(), book.authorId());
+        }
+    }
+
+    @Override
     public Optional<Book> findOne(String isbn) {
         System.out.println(isbn);
         List<Book> books = jdbcTemplate.query(
@@ -40,6 +49,19 @@ public class BookDAOimpl implements BookDAO {
         );
         return books.stream().findFirst();
     }
+
+
+    @Override
+    public List<Book> findMany() {
+        List<Book> books = jdbcTemplate.query(
+                "select * from books;",
+                new BookRowMapper());
+
+        System.out.println(books);
+        return books;
+    }
+
+
 
     public static class BookRowMapper implements RowMapper<Book> {
 

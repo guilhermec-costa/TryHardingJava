@@ -11,6 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.jdbc.core.JdbcTemplate;
 import static org.mockito.ArgumentMatchers.eq;
 
+import com.javaIntro.SpringAppDatabase.database.DAOs.Impl.AuthorDAOImpl;
 import com.javaIntro.SpringAppDatabase.database.DAOs.Impl.BookDAOimpl;
 import com.javaIntro.SpringAppDatabase.database.domain.Book;
 
@@ -48,5 +49,15 @@ public class BookDAOImplTest {
                 ArgumentMatchers.<BookDAOimpl.BookRowMapper>any(),
                 eq("xxxxxxx")
         );
+    }
+
+    @Test
+    public void testThatFindManyBooksGeneratesCorrectSQL() {
+        bookDAOimpl.findMany();
+        verify(jdbcTemplate).
+            query(
+                eq("select * from books;"),
+                ArgumentMatchers.<AuthorDAOImpl.AuthorRowMapper>any()
+            );
     }
 }

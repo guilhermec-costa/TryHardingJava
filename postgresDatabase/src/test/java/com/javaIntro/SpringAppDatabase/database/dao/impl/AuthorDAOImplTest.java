@@ -58,5 +58,4 @@ public class AuthorDAOImplTest {
             ArgumentMatchers.<AuthorDAOImpl.AuthorRowMapper>any()
         );
     }
-
 }
