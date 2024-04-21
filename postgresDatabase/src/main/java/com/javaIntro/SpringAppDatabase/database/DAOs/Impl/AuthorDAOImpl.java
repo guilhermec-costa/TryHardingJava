@@ -29,6 +29,17 @@ public class AuthorDAOImpl implements AuthorDAO {
         );
     }
 
+
+    @Override
+    public void create(List<Author> authors) {
+        for(Author author: authors) {
+            jdbcTemplate.update(
+                "insert into authors (id, name, age) values (?, ?, ?)",
+                author.id(), author.name(), author.age()
+            );
+        }
+    }
+
     @Override
     public Optional<Author> findOne(Long authorId) {
         List<Author> authors = jdbcTemplate.query(
@@ -40,12 +51,22 @@ public class AuthorDAOImpl implements AuthorDAO {
         return authors.stream().findFirst();
     }
 
+    @Override
+    public List<Author> findMany() {
+        List<Author> authors = jdbcTemplate.query(
+                "select * from authors;",
+                new AuthorRowMapper());
+
+        return authors;
+    }
+
+
     public static class AuthorRowMapper implements RowMapper<Author> {
 
         @Override
         public Author mapRow(ResultSet rs, int rowNum) throws SQLException {
             return new Author(
-                    rs.getLong(1),
+                    rs.getLong("id"),
                     rs.getString("name"),
                     rs.getInt("age")
             );
