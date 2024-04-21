@@ -41,7 +41,6 @@ public class BookDAOimpl implements BookDAO {
 
     @Override
     public Optional<Book> findOne(String isbn) {
-        System.out.println(isbn);
         List<Book> books = jdbcTemplate.query(
             "select * from books where isbn = ?;",
             new BookRowMapper(),
@@ -57,8 +56,18 @@ public class BookDAOimpl implements BookDAO {
                 "select * from books;",
                 new BookRowMapper());
 
-        System.out.println(books);
         return books;
+    }
+
+    @Override
+    public void update(String isbn, Book book) {
+        jdbcTemplate.update(
+            "update books set isbn = ?, title = ?, author_id = ? where isbn = ?",
+            book.isbn(),
+            book.title(),
+            book.authorId(),
+            isbn
+        );
     }
 
 

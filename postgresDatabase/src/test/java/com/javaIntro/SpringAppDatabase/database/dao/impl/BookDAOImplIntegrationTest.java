@@ -5,6 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,6 +61,20 @@ public class BookDAOImplIntegrationTest {
 
         List<Book> books = bookDAOimpl.findMany();
         System.out.println(authorDAOImpl.findOne(books.get(1).authorId()).get().name());
+    }
+
+    @Test
+    public void testThatBookCanBeFullyUpdated() {
+        Author authorX = new Author(1L, "churros", 9);
+        authorDAOImpl.create(authorX);
+
+        Book bookX = new Book("xxxxxxx", "Churros book", authorX.id());
+        bookDAOimpl.create(bookX);
+
+        Book bookY = new Book("yyyyyyy", "Shoyou book", authorX.id());
+        bookDAOimpl.update("xxxxxxx", bookY);
+        List<Book> retrivedBook = bookDAOimpl.findMany();
+        System.out.println(retrivedBook);
     }
 
 }

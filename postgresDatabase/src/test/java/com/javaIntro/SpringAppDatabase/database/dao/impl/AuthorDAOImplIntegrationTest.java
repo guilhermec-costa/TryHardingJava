@@ -59,6 +59,7 @@ public class AuthorDAOImplIntegrationTest {
     public void authorCanBeFullyUpdated() {
         Author author = new Author(1L, "Guilherme", 20);
         authorDAOImpl.create(author);
+        // author.setName("Churros");
         authorDAOImpl.update(1L, author);
         Optional<Author> updatedAuthor = authorDAOImpl.findOne(1L);
         System.out.println(updatedAuthor.get().name());

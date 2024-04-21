@@ -10,4 +10,5 @@ public interface BookDAO {
    public void create(List<Book> books);
    public Optional<Book> findOne(String isbn);
    public List<Book> findMany();
+   public void update(String isbn, Book book);
 }

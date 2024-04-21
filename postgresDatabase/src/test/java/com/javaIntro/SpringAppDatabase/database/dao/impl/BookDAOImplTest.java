@@ -60,4 +60,17 @@ public class BookDAOImplTest {
                 ArgumentMatchers.<AuthorDAOImpl.AuthorRowMapper>any()
             );
     }
+
+    @Test
+    public void testThatFullyUpdateBookGeneratesCorrectSQL() {
+        Book book = new Book("xxxxxxx", "Churros book 1", 1L);
+        bookDAOimpl.update("xxxxxxx", book);
+        verify(jdbcTemplate).update(
+                eq("update books set isbn = ?, title = ?, author_id = ? where isbn = ?"),
+                eq("xxxxxxx"),
+                eq("Churros book 1"),
+                eq(1L),
+                eq("xxxxxxx")
+        );
+    }
 }
