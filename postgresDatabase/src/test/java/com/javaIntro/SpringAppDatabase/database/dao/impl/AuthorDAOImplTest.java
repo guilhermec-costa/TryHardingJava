@@ -71,4 +71,16 @@ public class AuthorDAOImplTest {
             eq(1L)
         );
     }
+
+    @Test
+    public void testThatDeleteAuthorGeneratesCorrectSQL() {
+        Author author = new Author(1L, "Churros", 9);
+        authorDAOImpl.create(author);
+        authorDAOImpl.delete(author);
+
+        verify(jdbcTemplate).update(
+            eq("delete from authors where id = ?;"),
+            eq(author.id())
+        );
+    }
 }

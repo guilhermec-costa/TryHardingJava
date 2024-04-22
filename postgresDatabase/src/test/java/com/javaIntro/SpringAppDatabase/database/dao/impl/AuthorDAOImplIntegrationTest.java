@@ -64,5 +64,12 @@ public class AuthorDAOImplIntegrationTest {
         Optional<Author> updatedAuthor = authorDAOImpl.findOne(1L);
         System.out.println(updatedAuthor.get().name());
     }
-    
+
+    @Test
+    public void authorCanBeDeleted() {
+        Author author = new Author(1L, "Guilherme", 20);
+        authorDAOImpl.delete(author);
+        Optional<Author> deletedAuthor = authorDAOImpl.findOne(1L);
+        assertEquals(true, deletedAuthor.isEmpty());
+    }
 }
