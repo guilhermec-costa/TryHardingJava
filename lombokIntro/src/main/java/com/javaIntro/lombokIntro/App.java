@@ -8,8 +8,5 @@ public class App
 {
     public static void main( String[] args ) 
     {
-        Author authorX = new Author("Churros", "family", 9);
-        LombokAuthor authorY = new LombokAuthor("Churros", "family", 9);
-
     }
 }
