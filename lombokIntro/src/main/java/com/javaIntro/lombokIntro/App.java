@@ -1,12 +1,15 @@
 package com.javaIntro.lombokIntro;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.javaIntro.lombokIntro.domain.Author;
-import com.javaIntro.lombokIntro.domain.LombokAuthor;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
-public class App 
-{
-    public static void main( String[] args ) 
-    {
+import lombok.extern.java.Log;
+
+@Log
+public class App {
+    // final static Logger log = Logger.getLogger(App.class.getName());
+
+    public static void main(String[] args) {
+        log.info("App started");
     }
 }

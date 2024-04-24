@@ -1,28 +1,22 @@
 package com.javaIntro.lombokIntro.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 /**
  * LombokAuthor
  */
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Builder
+// @Data: includes @Setter, @Getter, @ToString, @EqualsAndHashCode
 public class LombokAuthor {
 
-    @Getter
-    @Setter
     private String givenName;
-
-    @Getter
-    @Setter
     private String familyName;
-    
-    @Getter
-    @Setter
     private Integer age;
-
-    public LombokAuthor(String givenName, String familyName, Integer age) {
-        this.givenName = givenName;
-        this.familyName = familyName;
-        this.age = age;
-    }
 
 }
