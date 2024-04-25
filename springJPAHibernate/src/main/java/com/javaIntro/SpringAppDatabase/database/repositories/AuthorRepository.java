@@ -1,9 +1,16 @@
 package com.javaIntro.SpringAppDatabase.database.repositories;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+import com.javaIntro.SpringAppDatabase.database.domain.Author;
+
 /**
  * AuthorRepository
  * Intermediates the persistence mecanism and the domain model
  * It must return all the cluster contained within a aggregate
  */
-public interface AuthorRepository {
+@Repository
+// @Repository mark the class as a bean, so it can be injected in others parts
+public interface AuthorRepository extends CrudRepository<Author, Long> {
 }
