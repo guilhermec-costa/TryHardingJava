@@ -1,12 +1,9 @@
 package com.javaIntro.SpringAppDatabase.database.repositories;
 
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookA;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Optional;
-
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -18,6 +15,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.javaIntro.SpringAppDatabase.database.domain.Author;
 import com.javaIntro.SpringAppDatabase.database.domain.Book;
 
+
 /**
  * BookDAOImplIntegrationTest
  */
@@ -26,4 +24,20 @@ import com.javaIntro.SpringAppDatabase.database.domain.Book;
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
 public class BookRepositoryIntegrationTests {
 
+    private BookRepository bookRepository;
+
+    @Autowired
+    public BookRepositoryIntegrationTests(BookRepository bookRepository) {
+        this.bookRepository = bookRepository;
+    }
+    
+    @Test
+    public void bookCanBeCreatedAndRecalled() {
+        Author author = createTestAuthorA();
+        Book book = createTestBookA(author);
+        bookRepository.save(book);
+
+        Optional<Book> persistedBook = bookRepository.findById(book.getIsbn());
+        System.out.println(persistedBook.get().getIsbn());
+    }
 }

@@ -23,6 +23,7 @@ public class Book {
     private String isbn;
     private String title;
 
+    // cascade: creates author at the same time a book is created
     @ManyToOne(targetEntity = Author.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "author_id")
     private Author author;
