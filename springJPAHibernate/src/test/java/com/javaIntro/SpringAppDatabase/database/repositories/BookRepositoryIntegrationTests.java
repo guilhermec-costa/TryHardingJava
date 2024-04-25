@@ -40,4 +40,19 @@ public class BookRepositoryIntegrationTests {
         Optional<Book> persistedBook = bookRepository.findById(book.getIsbn());
         System.out.println(persistedBook.get().getIsbn());
     }
+
+    @Test
+    public void manyBooksCanBeCreatedAndRecalled() {
+        Book bookX = createTestBookA(createTestAuthorA());
+        Book bookY = createTestBookA(createTestAuthorA());
+        Book bookZ = createTestBookA(createTestAuthorA());
+
+        bookRepository.save(bookX);
+        bookRepository.save(bookY);
+        bookRepository.save(bookZ);
+        Iterable<Book> books = bookRepository.findAll();
+        for(Book book: books) {
+            System.out.println(book);
+        }
+    }
 }
