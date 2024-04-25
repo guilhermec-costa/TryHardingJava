@@ -5,6 +5,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.javaIntro.SpringAppDatabase.database.domain.Author;
 
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
+
 @SpringBootTest
 class PostgresDatabaseApplicationTests {
 
@@ -14,11 +16,6 @@ class PostgresDatabaseApplicationTests {
 
     @Test
     void testAuthor() {
-        Author author = Author.builder()
-            .name("Churros")
-            .age(9)
-            .build();
-        System.out.println(author);
     }
 
 }

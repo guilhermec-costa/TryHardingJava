@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
@@ -23,5 +24,6 @@ public class Book {
     private String title;
 
     @ManyToOne(targetEntity = Author.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "author_id")
     private Author author;
 }

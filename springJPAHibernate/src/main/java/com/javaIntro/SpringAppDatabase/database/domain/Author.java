@@ -10,11 +10,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 @Builder
-@Data
+@Entity
 @Table(name = "authors")
 public class Author {
     
