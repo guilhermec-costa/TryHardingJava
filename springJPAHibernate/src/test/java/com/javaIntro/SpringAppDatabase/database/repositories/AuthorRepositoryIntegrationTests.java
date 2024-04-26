@@ -3,9 +3,10 @@ package com.javaIntro.SpringAppDatabase.database.repositories;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorB;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorC;
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookC;
 
 import java.util.Optional;
-
+import java.util.logging.Logger;
 import org.hibernate.mapping.List;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -26,6 +27,7 @@ import com.javaIntro.SpringAppDatabase.database.domain.Author;
 public class AuthorRepositoryIntegrationTests {
 
     private AuthorRepository authorRepository;
+    private Logger logger = Logger.getLogger(AuthorRepositoryIntegrationTests.class.getName());
 
     @Autowired
     public AuthorRepositoryIntegrationTests(AuthorRepository authorRepository) {
@@ -65,5 +67,15 @@ public class AuthorRepositoryIntegrationTests {
         authorRepository.save(author);
         Optional<Author> persistedAuthor = authorRepository.findById(author.getId());
         System.out.println(persistedAuthor);
+    }
+
+    @Test
+    public void testAuthorCanBeDeleted() {
+        Author author = createTestAuthorA();
+        authorRepository.save(author);
+        authorRepository.delete(author);
+        Optional<Author> deletedAuthor = authorRepository.findById(author.getId());
+        // logger.info(Boolean.valueOf(deletedAuthor.isEmpty()).toString());
+        assertEquals(true, deletedAuthor.isEmpty());
     }
 }

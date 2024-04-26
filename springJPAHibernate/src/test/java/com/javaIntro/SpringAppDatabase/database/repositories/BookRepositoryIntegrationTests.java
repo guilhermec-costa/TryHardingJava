@@ -3,6 +3,7 @@ package com.javaIntro.SpringAppDatabase.database.repositories;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookA;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookC;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Optional;
 
@@ -61,8 +62,19 @@ public class BookRepositoryIntegrationTests {
     public void testThatOneBookCanBeUpdated() {
         Author authorX = createTestAuthorA();
         Book bookX = createTestBookC(authorX);
+        bookX.setTitle("Title updated");
         bookRepository.save(bookX);
         Optional<Book> book = bookRepository.findById(bookX.getIsbn());
         System.out.println(book);
+    }
+
+    @Test
+    public void testThatBookCanBeDeleted() {
+        Author authorX = createTestAuthorA();
+        Book book = createTestBookC(authorX);
+        bookRepository.save(book);
+        bookRepository.delete(book);
+        Optional<Book> deletedBook = bookRepository.findById(book.getIsbn());
+        assertEquals(true, deletedBook.isEmpty());
     }
 }
