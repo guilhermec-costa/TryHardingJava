@@ -13,4 +13,5 @@ import com.javaIntro.SpringAppDatabase.database.domain.Author;
 @Repository
 // @Repository mark the class as a bean, so it can be injected in others parts
 public interface AuthorRepository extends CrudRepository<Author, Long> {
+    Iterable<Author> ageLessThan(int Age);
 }

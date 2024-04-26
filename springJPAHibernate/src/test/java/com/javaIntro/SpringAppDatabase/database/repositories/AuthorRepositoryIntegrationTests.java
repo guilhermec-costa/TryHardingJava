@@ -78,4 +78,19 @@ public class AuthorRepositoryIntegrationTests {
         // logger.info(Boolean.valueOf(deletedAuthor.isEmpty()).toString());
         assertEquals(true, deletedAuthor.isEmpty());
     }
+
+    @Test
+    public void testGetAuthorsWithAgeLessThan() {
+        Author authorA = createTestAuthorA();
+        Author authorB = createTestAuthorB();
+        Author authorC = createTestAuthorC();
+        authorRepository.save(authorA);
+        authorRepository.save(authorB);
+        authorRepository.save(authorC);
+
+        Iterable<Author> authors = authorRepository.ageLessThan(40);
+        for (Author author : authors) {
+            System.out.println("test: " + author);
+        }
+    }
 }
