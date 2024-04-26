@@ -56,4 +56,14 @@ public class AuthorRepositoryIntegrationTests {
             System.out.println(author);
         }
     }
+
+    @Test
+    public void testThatOneAuthorCanBeUpdated() {
+        Author author = createTestAuthorA();
+        authorRepository.save(author);
+        author.setName("Name updated");
+        authorRepository.save(author);
+        Optional<Author> persistedAuthor = authorRepository.findById(author.getId());
+        System.out.println(persistedAuthor);
+    }
 }

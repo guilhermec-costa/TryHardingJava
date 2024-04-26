@@ -2,6 +2,7 @@ package com.javaIntro.SpringAppDatabase.database.repositories;
 
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookA;
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookC;
 
 import java.util.Optional;
 
@@ -14,7 +15,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.javaIntro.SpringAppDatabase.database.domain.Author;
 import com.javaIntro.SpringAppDatabase.database.domain.Book;
-
 
 /**
  * BookDAOImplIntegrationTest
@@ -30,7 +30,7 @@ public class BookRepositoryIntegrationTests {
     public BookRepositoryIntegrationTests(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
-    
+
     @Test
     public void bookCanBeCreatedAndRecalled() {
         Author author = createTestAuthorA();
@@ -50,9 +50,19 @@ public class BookRepositoryIntegrationTests {
         bookRepository.save(bookX);
         bookRepository.save(bookY);
         bookRepository.save(bookZ);
+
         Iterable<Book> books = bookRepository.findAll();
-        for(Book book: books) {
+        for (Book book : books) {
             System.out.println(book);
         }
+    }
+
+    @Test
+    public void testThatOneBookCanBeUpdated() {
+        Author authorX = createTestAuthorA();
+        Book bookX = createTestBookC(authorX);
+        bookRepository.save(bookX);
+        Optional<Book> book = bookRepository.findById(bookX.getIsbn());
+        System.out.println(book);
     }
 }
