@@ -3,6 +3,7 @@ package com.javaIntro.SpringAppDatabase.database.repositories;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorA;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorB;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorC;
+import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorD;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookC;
 
 import java.util.Optional;
@@ -89,8 +90,23 @@ public class AuthorRepositoryIntegrationTests {
         authorRepository.save(authorC);
 
         Iterable<Author> authors = authorRepository.ageLessThan(40);
+    }
+
+    @Test
+    public void testGetAuthorsWithAgeGreaterThan() {
+        Author authorA = createTestAuthorA();
+        Author authorB = createTestAuthorB();
+        Author authorC = createTestAuthorC();
+        Author authorD = createTestAuthorD();
+
+        authorRepository.save(authorA);
+        authorRepository.save(authorB);
+        authorRepository.save(authorC);
+        authorRepository.save(authorD);
+
+        Iterable<Author> authors = authorRepository.findWithAgeGreaterThan(10);
         for (Author author : authors) {
-            System.out.println("test: " + author);
+            System.out.println("test : " + author);
         }
     }
 }
