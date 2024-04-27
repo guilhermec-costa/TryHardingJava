@@ -43,7 +43,8 @@ public class JacksonTests {
     }
 
     @Test
-    public void testThatObjectMapperCanCreateBookObjectFromJsonString() throws JsonMappingException, JsonProcessingException {
+    public void testThatObjectMapperCanCreateBookObjectFromJsonString()
+            throws JsonMappingException, JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
         String bookJsonString = "{\"isbn\":\"145-xxy-qsa-347-92\",\"title\":\"Randomtitle\",\"author\":{\"id\":1,\"name\":\"Churros\",\"age\":9}}";
         Book book = objectMapper.readValue(bookJsonString, Book.class);
