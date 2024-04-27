@@ -13,8 +13,8 @@ import org.junit.jupiter.api.Test;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.javaIntro.SpringAppDatabase.database.domain.Author;
-import com.javaIntro.SpringAppDatabase.database.domain.Book;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Author;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Book;
 
 public class JacksonTests {
 

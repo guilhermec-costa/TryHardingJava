@@ -1,7 +1,7 @@
 package com.javaIntro.SpringAppDatabase.database;
 
-import com.javaIntro.SpringAppDatabase.database.domain.Author;
-import com.javaIntro.SpringAppDatabase.database.domain.Book;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Author;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Book;
 
 public final class TestDataUtil {
     private TestDataUtil() {

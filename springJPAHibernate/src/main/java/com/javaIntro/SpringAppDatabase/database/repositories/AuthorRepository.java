@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.javaIntro.SpringAppDatabase.database.domain.Author;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Author;
 
 /**
  * AuthorRepository
