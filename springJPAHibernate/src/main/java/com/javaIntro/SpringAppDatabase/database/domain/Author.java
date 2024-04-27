@@ -1,5 +1,8 @@
 package com.javaIntro.SpringAppDatabase.database.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -14,14 +17,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 @Entity
 @Table(name = "authors")
 public class Author {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "author_id_sequence")
     private Long id;
     private String name;
+
+    @JsonProperty(value = "currentAge")
     private Integer age;
 }
- 
