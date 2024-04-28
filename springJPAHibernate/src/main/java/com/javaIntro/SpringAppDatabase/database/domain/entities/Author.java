@@ -1,4 +1,4 @@
-package com.javaIntro.SpringAppDatabase.database.domain;
+package com.javaIntro.SpringAppDatabase.database.domain.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

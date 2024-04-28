@@ -1,4 +1,4 @@
-package com.javaIntro.SpringAppDatabase.database.domain;
+package com.javaIntro.SpringAppDatabase.database.domain.entities;
 
 import lombok.Data;
 import lombok.AllArgsConstructor;

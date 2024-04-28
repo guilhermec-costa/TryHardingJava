@@ -4,20 +4,19 @@ import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAu
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorB;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorC;
 import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestAuthorD;
-import static com.javaIntro.SpringAppDatabase.database.TestDataUtil.createTestBookC;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.Optional;
 import java.util.logging.Logger;
-import org.hibernate.mapping.List;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import com.javaIntro.SpringAppDatabase.database.domain.Author;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Author;
 
 /**
  * AuthorDAOImplIntegrationTest

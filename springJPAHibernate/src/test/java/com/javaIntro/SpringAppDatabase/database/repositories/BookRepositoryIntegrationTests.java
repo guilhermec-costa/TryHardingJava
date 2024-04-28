@@ -14,8 +14,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import com.javaIntro.SpringAppDatabase.database.domain.Author;
-import com.javaIntro.SpringAppDatabase.database.domain.Book;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Author;
+import com.javaIntro.SpringAppDatabase.database.domain.entities.Book;
 
 /**
  * BookDAOImplIntegrationTest
